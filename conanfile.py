@@ -41,4 +41,5 @@ class BoostStacktraceConan(ConanFile):
         self.user_info.lib_short_names = ",".join(self.lib_short_names)
         self.cpp_info.libs = self.collect_libs()
         self.cpp_info.defines.append("BOOST_ALL_NO_LIB=1")
+        self.cpp_info.defines.append("BOOST_STACKTRACE_GNU_SOURCE_NOT_REQUIRED=1")
 
