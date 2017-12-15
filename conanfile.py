@@ -5,6 +5,8 @@ class BoostStacktraceConan(ConanFile):
     name = "Boost.Stacktrace"
     version = "1.65.1"
 
+    options = {"shared": [True, False]}
+    default_options = "shared=False"
 
     requires = \
         "Boost.Array/1.65.1@bincrafters/testing", \
