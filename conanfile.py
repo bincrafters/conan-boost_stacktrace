@@ -7,7 +7,7 @@ from conans import ConanFile, tools
 class BoostStacktraceConan(ConanFile):
     name = "boost_stacktrace"
     version = "1.66.0"
-    url = "https://github.com/bincrafters/conan-boost-stacktrace"
+    url = "https://github.com/bincrafters/conan-boost_stacktrace"
 
     lib_short_names = ["stacktrace"]
     is_header_only = False
