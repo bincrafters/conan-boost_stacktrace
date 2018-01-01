@@ -26,7 +26,7 @@ class BoostStacktraceConan(ConanFile):
         "boost_winapi/1.66.0@bincrafters/testing"
     )
     
-    def package_info_after(self):
+    def package_info_additional(self):
         self.cpp_info.defines.append("BOOST_STACKTRACE_GNU_SOURCE_NOT_REQUIRED=1")
 
     # BEGIN
