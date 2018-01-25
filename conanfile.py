@@ -8,7 +8,8 @@ class BoostStacktraceConan(ConanFile):
     name = "boost_stacktrace"
     version = "1.66.0"
     url = "https://github.com/bincrafters/conan-boost_stacktrace"
-
+    author = "Bincrafters <bincrafters@gmail.com>"
+    exports = ["LICENSE.md"]
     lib_short_names = ["stacktrace"]
     is_header_only = False
     
