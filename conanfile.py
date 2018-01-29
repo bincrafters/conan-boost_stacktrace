@@ -8,7 +8,8 @@ class BoostStacktraceConan(ConanFile):
     name = "boost_stacktrace"
     version = "1.66.0"
     url = "https://github.com/bincrafters/conan-boost_stacktrace"
-
+    author = "Bincrafters <bincrafters@gmail.com>"
+    exports = ["LICENSE.md"]
     lib_short_names = ["stacktrace"]
     is_header_only = False
     
@@ -16,14 +17,14 @@ class BoostStacktraceConan(ConanFile):
     default_options = "shared=False"
 
     requires = (
-        "boost_package_tools/1.66.0@bincrafters/testing",
-        "boost_array/1.66.0@bincrafters/testing",
-        "boost_config/1.66.0@bincrafters/testing",
-        "boost_core/1.66.0@bincrafters/testing",
-        "boost_lexical_cast/1.66.0@bincrafters/testing",
-        "boost_static_assert/1.66.0@bincrafters/testing",
-        "boost_type_traits/1.66.0@bincrafters/testing",
-        "boost_winapi/1.66.0@bincrafters/testing"
+        "boost_package_tools/1.66.0@bincrafters/stable",
+        "boost_array/1.66.0@bincrafters/stable",
+        "boost_config/1.66.0@bincrafters/stable",
+        "boost_core/1.66.0@bincrafters/stable",
+        "boost_lexical_cast/1.66.0@bincrafters/stable",
+        "boost_static_assert/1.66.0@bincrafters/stable",
+        "boost_type_traits/1.66.0@bincrafters/stable",
+        "boost_winapi/1.66.0@bincrafters/stable"
     )
     
     def package_info_additional(self):
@@ -36,7 +37,7 @@ class BoostStacktraceConan(ConanFile):
     short_paths = True
     generators = "boost"
     settings = "os", "arch", "compiler", "build_type"
-    build_requires = "boost_generator/1.66.0@bincrafters/testing"
+    build_requires = "boost_generator/1.66.0@bincrafters/stable"
 
     def package_id(self):
         getattr(self, "package_id_additional", lambda:None)()
