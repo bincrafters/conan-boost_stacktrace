@@ -4,7 +4,7 @@
 from conans import python_requires
 
 
-base = python_requires("boost_base/1.67.0@bincrafters/testing")
+base = python_requires("boost_base/1.68.0@bincrafters/testing")
 
 class BoostStacktraceConan(base.BoostBaseConan):
     name = "boost_stacktrace"
@@ -17,7 +17,6 @@ class BoostStacktraceConan(base.BoostBaseConan):
         "boost_config",
         "boost_container_hash",
         "boost_core",
-        "boost_lexical_cast",
         "boost_static_assert",
         "boost_type_traits",
         "boost_winapi"
@@ -25,4 +24,3 @@ class BoostStacktraceConan(base.BoostBaseConan):
 
     def package_info_additional(self):
         self.cpp_info.defines.append("BOOST_STACKTRACE_GNU_SOURCE_NOT_REQUIRED=1")
-
