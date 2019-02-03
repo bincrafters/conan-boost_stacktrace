@@ -82,6 +82,14 @@ matrix:
         env: CONAN_CLANG_VERSIONS=6.0 CONAN_DOCKER_IMAGE=conanio/clang60 CONAN_CURRENT_PAGE=3 CONAN_TOTAL_PAGES=4
       - <<: *linux
         env: CONAN_CLANG_VERSIONS=6.0 CONAN_DOCKER_IMAGE=conanio/clang60 CONAN_CURRENT_PAGE=4 CONAN_TOTAL_PAGES=4
+      - <<: *linux
+        env: CONAN_CLANG_VERSIONS=7.0 CONAN_DOCKER_IMAGE=conanio/clang7 CONAN_CURRENT_PAGE=1 CONAN_TOTAL_PAGES=4
+      - <<: *linux
+        env: CONAN_CLANG_VERSIONS=7.0 CONAN_DOCKER_IMAGE=conanio/clang7 CONAN_CURRENT_PAGE=2 CONAN_TOTAL_PAGES=4
+      - <<: *linux
+        env: CONAN_CLANG_VERSIONS=7.0 CONAN_DOCKER_IMAGE=conanio/clang7 CONAN_CURRENT_PAGE=3 CONAN_TOTAL_PAGES=4
+      - <<: *linux
+        env: CONAN_CLANG_VERSIONS=7.0 CONAN_DOCKER_IMAGE=conanio/clang7 CONAN_CURRENT_PAGE=4 CONAN_TOTAL_PAGES=4
       - <<: *osx
         osx_image: xcode8.3
         env: CONAN_APPLE_CLANG_VERSIONS=8.1 CONAN_CURRENT_PAGE=1 CONAN_TOTAL_PAGES=2
@@ -108,9 +116,9 @@ matrix:
         env: CONAN_APPLE_CLANG_VERSIONS=10.0 CONAN_CURRENT_PAGE=2 CONAN_TOTAL_PAGES=2
         
 install:
-  - chmod +x .travis/install.sh
-  - ./.travis/install.sh
+  - chmod +x .ci/install.sh
+  - ./.ci/install.sh
 
 script:
-  - chmod +x .travis/run.sh
-  - ./.travis/run.sh
+  - chmod +x .ci/run.sh
+  - ./.ci/run.sh
